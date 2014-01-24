@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Comments: <%= controller.action_name %></title>
+
+<style type="text/css">
+
+a:link {color:#000000;text-decoration: none}
+
+div.title
+{
+position:fixed;top:22px;left:5px;z-index:1
+}
+
+p.padding
+{
+position:fixed;top:22px;font-family:Arial,Verdana,Sans-serif;font-weight:bold;z-index:1;
+background-color:white;
+padding-top:25px;
+padding-bottom:25px;
+padding-right:6px;
+padding-left:60px;
+}
+
+
+div.img
+{
+width:1800px;
+padding:0px;
+border:0px;
+margin:20px;
+position:absolute;
+left:-70px;
+top: -158px;
+}
+
+div.img img
+{
+  display: inline;
+  margin: 50px;
+}
+
+div.message
+{position:fixed;top:19px;left:210px;z-index:1
+}
+
+div.leftframe
+{position:fixed;top:10px;left:-230px;z-index:1
+}
+
+div.rightframe
+{position:fixed;top:14px;left:690px;z-index:1
+}
+
+div.about
+{position:fixed;top:145px;z-index:1
+}
+
+div.submit
+{position:fixed;top:145px;left:76px;z-index:1
+}
+
+p.continet {
+	position:fixed;
+	left:8px;
+	top:170px;
+	z-index:2;
+	}
+
+p.country {
+	position:fixed;
+	left:8px;
+	top:220px;
+	z-index:2;
+	}
+	
+p.genre {
+	position:fixed;
+	left:8px;
+	top:320px;
+	z-index:2;
+	}
+	
+p.decade {
+	position:fixed;
+	left:8px;
+	top:270px;
+	z-index:2;
+	}
+
+p.media {
+	position:fixed;
+	left:8px;
+	top:370px;
+	z-index:2;
+	}
+	
+p.market {
+	position:fixed;
+	left:8px;
+	top:420px;
+	z-index:2;
+	}
+
+</style>
+
+</head>
+<body>
+
+
+<div class="about">
+		<a href="http://localhost:3000/comments/about">
+		<img src="/images/Horror_Images/ABOUT.jpg" width="61" height="20" style="opacity:0.6;filter:alpha(opacity=60)" />
+	</div>
+
+
+<div class="submit">
+		<a href="http://localhost:3000/comments/new">
+		<img src="/images/Horror_Images/SUBMIT.jpg" width="67" height="20" style="opacity:0.6;filter:alpha(opacity=60)" /></a>
+
+	</div>
+
+
+<div class="title">
+		<img src="/images/Horror_Images/HORROR_TITLE_matte.jpg" width="177" height="113" style="opacity:0.6;filter:alpha(opacity=60)" />
+	</div>
+
+<p style="color: black"><%= flash[:notice] %></p>
+
+<%= yield  %>
+
+</body>
+</html>

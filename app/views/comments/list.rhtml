@@ -1,0 +1,33 @@
+
+
+<table style= "font-family:arial; position:absolute; left:209px; top:210px;">
+  <tr>
+  <th>ID</th>
+  <% for column in Comment.content_columns %>
+    <th><%= column.human_name %></th>
+  <% end %>
+  </tr>
+  
+<% for comment in @comments %>
+  <tr>
+  <td><%= comment.id %></td>
+  <% for column in Comment.content_columns %>
+    <td><%=h comment.send(column.name) %></td>
+  <% end %>
+    <td><%= link_to 'Show', :action => 'show', :id => comment %></td>
+    <td><%= link_to 'Edit', :action => 'edit', :id => comment %></td>
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => comment }, :confirm => 'Are you sure?', :method => :post %></td>
+  </tr>
+<% end %>
+</table>
+
+
+<%= link_to 'Previous page', { :page => @comment_pages.current.previous } if @comment_pages.current.previous %>
+<%= link_to 'Next page', { :page => @comment_pages.current.next } if @comment_pages.current.next %> 
+
+<br />
+
+	<h3 style= "font-family:arial; position:absolute; left:210px; top:154px;"> FILM INDEX </h3>
+	<h5 style= "font-family:arial; position:fixed; left:15px; top:190px;">
+	<%= link_to 'ADD NEW FILM', :action => 'new' %></h5>
+	<h5 style= "font-family:arial; position:fixed; left:15px; top:230px;"><a href="http://localhost:3000/comments?continent=&country=&genre=&decade=&media=&market=">MAIN PAGE</h5>

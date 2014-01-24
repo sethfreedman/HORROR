@@ -1,0 +1,93 @@
+	
+<!--<div class="message">
+		<img src="images/Horror_Images/MESSAGE_OUT.png" width="417" height="500" style="opacity:.6;filter:alpha(opacity=60)" />
+	</div>-->
+	
+<!--<div class="leftframe">
+		<img src="images/Horror_Images/LEFT_FRAME.png" width="439" height="275" style="opacity:.6;filter:alpha(opacity=60)" />
+	</div>-->
+
+<!--<div class="rightframe">
+		<img src="images/Horror_Images/EXTRA_FRAME.png" width="582" height="667" style="opacity:.6;filter:alpha(opacity=60)" />
+	</div>-->
+	
+<form action="/comments">
+<p class="continet">
+<select name="continent" onchange="this.form.submit();">
+	<option value="">CONTINENT</option>
+	<option value="N America"<%= ' selected' if params[:continent] == 'N America' %>>N AMERICA</option>
+	<option value="S America"<%= ' selected' if params[:continent] == 'S America' %>>S AMERICA</option>
+	<option value="Europe"<%= ' selected' if params[:continent] == 'Europe' %>>EUROPE</option>
+	<option value="Asia"<%= ' selected' if params[:continent] == 'Asia' %>>ASIA</option>
+	<option value="Australia"<%= ' selected' if params[:continent] == 'Australia' %>>AUSTRALIA</option>
+</select>
+</p>
+
+<p class="country">
+<select name="country" onchange="this.form.submit();">
+	<option value="">COUNTRY&nbsp&nbsp&nbsp</option>
+	<option value="US"<%= ' selected' if params[:continent] == 'US' %>>US</option>
+	<option value="Japan"<%= ' selected' if params[:continent] == 'Japan' %>>JAPAN</option>
+	<option value="Italy"<%= ' selected' if params[:continent] == 'Italy' %>>ITALY</option>
+	<option value="UK"<%= ' selected' if params[:continent] == 'UK' %>>UK</option>
+	<option value="Korea"<%= ' selected' if params[:continent] == 'Korea' %>>KOREA</option>
+	<option value="India"<%= ' selected' if params[:continent] == 'India' %>>INDIA</option>
+	<option value="Mexico"<%= ' selected' if params[:continent] == 'Mexico' %>>MEXICO</option>
+	<option value="Poland"<%= ' selected' if params[:continent] == 'Poland' %>>POLAND</option>
+	<option value="Finland"<%= ' selected' if params[:continent] == 'Finland' %>>FINLAND</option>
+	<option value="Norway"<%= ' selected' if params[:continent] == 'Norway' %>>NORWAY</option>
+	<option value="Pakistan"<%= ' selected' if params[:continent] == 'Pakistan' %>>PAKISTAN</option>
+</select>
+</p>
+
+<p class="genre">
+<select name="genre" onchange="this.form.submit();">
+	<option value="">GENRE</option>
+	<option value="Slasher"<%= ' selected' if params[:continent] == 'Slasher' %>>SLASHER</option>
+	<option value="Monster"<%= ' selected' if params[:continent] == 'Monster' %>>MONSTER</option>
+	<option value="Zombie"<%= ' selected' if params[:continent] == 'Zombie' %>>ZOMBIE</option>
+	<option value="Thriller"<%= ' selected' if params[:continent] == 'Thriller' %>>THRILLER&nbsp&nbsp&nbsp&nbsp</option>
+</select>
+</p>
+
+<p class="decade">
+<select name="decade" onchange="this.form.submit();">>
+	<option value="">DECADE&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</option>
+	<option value="1950"<%= ' selected' if params[:continent] == '1950' %>>1950s</option>
+	<option value="1960"<%= ' selected' if params[:continent] == '1960' %>>1960s</option>
+	<option value="1970"<%= ' selected' if params[:continent] == '1970' %>>1970s</option>
+	<option value="1980"<%= ' selected' if params[:continent] == '1980' %>>1980s</option>
+	<option value="1990"<%= ' selected' if params[:continent] == '1990' %>>1990s</option>
+	<option value="2000"<%= ' selected' if params[:continent] == '2000' %>>2000s</option>
+</select>
+</p>
+
+
+<p class="media">
+<select name="media" onchange="this.form.submit();">>
+	<option value="">MEDIA&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</option>
+	<option value="Film"<%= ' selected' if params[:continent] == 'Film' %>>FILM</option>
+	<option value="Print"<%= ' selected' if params[:continent] == 'Print' %>>PRINT</option>
+</select>
+</p>
+
+<p class="market">
+<select name="market" onchange="this.form.submit();">>
+	<option value="">MARKET&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</option>
+	<option value="Major"<%= ' selected' if params[:continent] == 'Major' %>>MAJOR</option>
+	<option value="Indie"<%= ' selected' if params[:continent] == 'Indie' %>>INDIE</option>
+</select>
+</p>
+</form>
+
+<div class="img">
+
+	<% @comments.each do |comment| %>
+	
+		<img src="/images/Horror_Images/<%= comment.id %>.jpg" />
+	
+	<% end %>
+
+</div>
+
+

@@ -1,0 +1,14 @@
+<h1>
+	Comment
+</h1>
+
+<p>
+	<% =@comment.message %>
+</p>
+
+<p>
+	%ndash;<x= @comment.author %
+	</p>
+	<% (1..@comment.rating).eachdo%>
+
+<%end%>

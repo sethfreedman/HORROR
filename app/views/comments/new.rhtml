@@ -1,0 +1,33 @@
+
+<head>
+<style type="text/css">
+
+	a:link {color:#D8D8D8D8;text-decoration: none}
+	
+</style>
+</head>
+
+<body>
+
+<div style="font-family:arial; position:absolute; left:210px; top:154px; opacity:0.9;filter:alpha(opacity=90)"/>
+
+<h3>NEW FILM</h3>
+
+<% form_tag :action => 'create' do %>
+  <%= render :partial => 'form' %>
+  <p>Image:
+<input type="file" name="image" />
+</p>
+  
+  <%= submit_tag "Create" %></p>
+<% end %>
+
+
+
+<%= link_to 'Index', :action => 'list' %>
+			
+</div>
+
+<h5 style= "font-family:arial; position:fixed; left:15px; top:190px;"><a href="http://localhost:3000/comments?continent=&country=&genre=&decade=&media=&market=">MAIN PAGE</h5>
+
+</body>
